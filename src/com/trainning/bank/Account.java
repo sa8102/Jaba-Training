@@ -1,17 +1,16 @@
 package com.trainning.bank;
 
-public  class Account {
+public abstract class Account {
 	
-	// Declaring Instance Variable, (Variable = Attribute) 
-	private int accountNumber; 
-	private String name; 
-	private double amount; 
-	
-	//Constructor
-	public Account(int accountNumber, String name, double amount) {
-		super();
+	private int accountNumber;
+	private String accountHolderName;
+    private double amount;
+    
+       
+    public Account(int accountNumber, String accountHolderName, double amount) {
+		
 		this.accountNumber = accountNumber;
-		this.name = name;
+		this.accountHolderName = accountHolderName;
 		this.amount = amount;
 	}
 
@@ -23,12 +22,12 @@ public  class Account {
 		this.accountNumber = accountNumber;
 	}
 
-	public String getName() {
-		return name;
+	public String getAccountHolderName() {
+		return accountHolderName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setAccountHolderName(String accountHolderName) {
+		this.accountHolderName = accountHolderName;
 	}
 
 	public double getAmount() {
@@ -39,9 +38,10 @@ public  class Account {
 		this.amount = amount;
 	}
 	
-	
 	public String display() {
-		return "Account Number : " + this.accountNumber + " Amount : " + this.amount;
+		return "Account number: "+this.accountNumber+ " Amount: "+this.amount;
 	}
-		
+	
+	public abstract double calculateTotalAmount();
+
 }
