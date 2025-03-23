@@ -1,9 +1,11 @@
 package com.training.collection;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class CollectionDemo {
@@ -72,6 +74,32 @@ public class CollectionDemo {
 		{
 			System.out.println(emp);
 		}
+		
+		
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("--- Maps ---");
+		System.out.println();
+
+		// Can have duplicates values 
+		//No duplicate Keys, it will be overridden 
+		
+		Map<Integer, String> empMap = new HashMap<>();
+		empMap.put(101, "Mohammed");
+		empMap.put(102, "Suleiman");
+		empMap.put(103, "Farah");
+		empMap.put(101, "Noorie");
+
+		
+		for(Entry<Integer, String> empEntry : empMap.entrySet() ) 
+		{
+			System.out.println(empEntry.getKey() + ":" + empEntry.getValue());
+
+		}
+
+		
+		
 		
 		
 	}
