@@ -1,3 +1,4 @@
+// Practice
 package com.training.q1;
 
 import java.util.Scanner;
